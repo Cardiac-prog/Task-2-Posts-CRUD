@@ -1,0 +1,19 @@
+<h2>Edit Comment:</h2>
+
+
+<%= form_with model: [@post, @comment] do |form| %>
+  
+  <p>
+    <%= form.label :commenter, "Name" %><br>
+    <%= form.text_field :commenter %>
+  </p>
+
+  <p>
+    <%= form.label :body, "Comment" %><br>
+    <%= form.text_area :body %>
+  </p>
+
+  <p>
+    <%= form.submit "Update Comment" %>
+  </p>  
+<% end %>
